@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+
+nav {
+    display: flex;
+  flex-direction: row;
+  align-items: stretch;
+    line-height: 2rem;
+    height: 2rem;
+}
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid red;
+    flex: 1;
+    text-align: center;
+}
