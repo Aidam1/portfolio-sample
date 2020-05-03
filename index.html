@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
 
     <nav>
+        <a href="#home">A<span class="logo__green-letter">Zn</span></a>
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
-        <a href="#portfolio" class="link-highlight">Portfolio</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#about">About me</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section id="home">
         <div>
-            <h1>Hi, I am <span class="full-name">Adam Znamenáček.</span></h1>
+            <h1>Hi, I am <a href="#about" class="full-name">Adam Znamenáček.</a></h1>
             <h2>I'm a full-stack Web Developer.</h2>
         </div>
     </section>
@@ -135,56 +137,59 @@
                 <div class="lang-name">UX</div>
                 <div class="progress">
                     <div class="progressbar" id="ux"></div>
-
                     <div class="percentage">50%</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>My portfolio</h2>
 
-        <div>
-            <img src="images/code.jpg" alt="code">
-            <div>
-                <p>Project 1</p>
-                <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+        <div class="portfolio__project--wrap">
+            <div class="portfolio__project">
+                <img src="images/code.jpg" alt="code">
+                <div class="project__text--wrap">
+                    <p>Project 1 Lorem ipsum Lorem ipslor sit amet. placeat velit.</p>
+                    <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+                </div>
             </div>
-        </div>
-        <div>
-            <img src="images/code.jpg" alt="code">
-            <div>
-                <p>Project 2</p>
-                <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+            <div class="portfolio__project">
+                <img src="images/code.jpg" alt="code">
+                <div class="project__text--wrap">
+                    <p>Project 2</p>
+                    <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+                </div>
             </div>
-        </div>
-        <div>
-            <img src="images/code.jpg" alt="code">
-            <div>
-                <p>Project 3</p>
-                <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+            <div class="portfolio__project">
+                <img src="images/code.jpg" alt="code">
+                <div class="project__text--wrap">
+                    <p>Project 3</p>
+                    <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+                </div>
             </div>
-        </div>
-        <div>
-            <img src="images/code.jpg" alt="code">
-            <div>
-                <p>Project 4</p>
-                <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+            <div class="portfolio__project">
+                <img src="images/code.jpg" alt="code">
+                <div class="project__text--wrap">
+                    <p>Project 4 Lorem ipsum dolor sit s illo voluptates quisquam.</p>
+                    <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+                </div>
             </div>
-        </div>
-        <div>
-            <img src="images/code.jpg" alt="code">
-            <div>
-                <p>Project 5</p>
-                <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+            <div class="portfolio__project">
+                <img src="images/code.jpg" alt="code">
+                <div class="project__text--wrap">
+                    <p>Project 5</p>
+                    <p><strong>Tech stack: HTML, CSS, Sass</strong></p>
+                </div>
             </div>
-        </div>
-        <div id="final-project">
-            <img src="images/code.jpg" alt="code">
-            <div>
-                <p>Project 6</p>
-                <a class="btn-link" href="https://github.com/Aidam1">Explore</a>
+            <div class="portfolio__project" id="final-project">
+                <img src="images/code.jpg" alt="code">
+                <div class="project__text--wrap">
+                    <p>Project 6</p>
+                    <div class="btn-link">
+                        <a href="https://github.com/Aidam1">Explore</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -192,27 +197,35 @@
 
     <section id="about">
         <h2>About me</h2>
-        <img src="images/profilepic.jpg" alt="profile picture">
-        <div class="about-me">
-            <p><strong>My name is Adam Znamenáček.</strong> I am a full-stack web developer and enjoy learning new
-                technology trends.<strong>I am developing user interfaces in Javascript and React and backend of my
-                    projects in PHP and Laravel.</strong>
-            </p>
-            <p>I am open to learning new technologies and enjoy working with people who are as passionate about all
-                web-related as me.</p>
-            <p>I have worked for clients all across Europe, but currently I am based in Prague, Czech republic</p>
-            <p>I like reading books and working out. If I'm not programming, you can also find me in the nature.</p>
+        <div class="about-me--wrap">
+            <img src="images/profilepic.jpg" alt="profile picture">
+            <div class="about-me__text--wrap">
+                <p><strong>My name is Adam Znamenáček.</strong> I am a full-stack web developer and enjoy learning new
+                    technology trends.<strong>I am developing user interfaces in Javascript and React and backend of my
+                        projects in PHP and Laravel.</strong>
+                </p>
+                <p>I am open to learning new technologies and enjoy working with people <span class="text--underline">
+                        who are as passionate about all web-related as me.
+                    </span>
+                </p>
+                <p>I have worked for clients all across Europe, but currently I am based in Prague, Czech republic</p>
+                <p>I like reading books and working out. If I'm not programming, you can also find me in the nature.</p>
 
-            <p>Get in touch and let's do something great together.</p>
-            <a href="mailto:adam.znamenacek@gmail.com">Contact me</a>
+                <p><strong>Get in touch and let's do something great together.</strong></p>
+                <div class="btn-link">
+                    <a href="mailto:adam.znamenacek@gmail.com">Contact me</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section>
+    <section id="find-me-here">
         <h2>Find me here</h2>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-linkedin-in"></i>
-        <i class="fab fa-instagram"></i>
+        <div class="find-me-here__icons">
+            <a href="https://www.github.com/Aidam1" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
     </section>
 
     <section id="contact">
@@ -222,22 +235,28 @@
             <input type="text" id="lname" name="lname" placeholder="Last name *">
             <input type="text" id="email" name="email" placeholder="Email *">
             <input type="text" id="phone" name="phone" placeholder="Phone">
-            <label for="message">My message</label>
-            <textarea name="message" rows="8" cols="80"></textarea>
-            <input type="submit" value="Send my message">
-        </div>
+            <div class="input-form__textarea--wrap">
+                <label for="message">My message *</label>
+                <textarea name="message" rows="8" cols="2"></textarea></di>
+            </div>
+            <input class="btn-submit" type="submit" value="Send my message">
+
     </section>
 
     <footer>
-        <h2>Nice to meet you!</h2>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-linkedin-in"></i>
-        <i class="fab fa-instagram"></i>
+        <div class="footer__line--wrap">
+            <div class="footer__line"></div>
+            <h2>Nice to meet you!</h2>
+            <div class="footer__line"></div>
+        </div>
+        <div class="footer__icons">
+            <a href="https://www.github.com/Aidam1" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
         <p>Copyright @Adam Znamenáček 2020</p>
     </footer>
 
-
-    <script src="https://kit.fontawesome.com/f9a143eb0e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

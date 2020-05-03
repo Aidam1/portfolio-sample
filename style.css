@@ -13,6 +13,11 @@ body {
 
 /* NAVBAR */
 nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -25,32 +30,58 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
     flex: 1;
+    white-space: nowrap;
     text-align: center;
+    
 }
 
 nav a:hover {
-    color: #54be90;
-}
-
-.link-highlight {
+    color: #232323;
     background-color: #54be90;
-       color: #000;
-
 }
 
-.link-highlight:hover {
-   color: #fff;
+nav a:first-of-type {
+font-family: 'Press Start 2P', cursive;
+    color: #232323;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    flex: 1;
+    background-color: #fff;
+    padding: 0 1rem;
+}
+
+.logo__green-letter {
+    color: #54be90;
+font-family: 'Press Start 2P', cursive;
+
+    font-size: 1.5rem;
 }
 
 
 /* HOME */
 
 #home {
-    background: url('images/bg.jpg') center/cover no-repeat fixed;
+    background-color: transparent;
     height: 30rem;
     text-align: center;
     color: #fff;
-    margin: 4rem 0 3rem 0; 
+    margin:  6rem 0 3rem 0; 
+    position: relative;
+}
+
+#home::after {
+    content: "";
+    filter: brightness(50%);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    background: url('images/bg-forest.jpg') center/cover no-repeat fixed;
 }
 #home div {
     margin-top: 8rem;
@@ -64,6 +95,11 @@ h1 {
 .full-name {
     color: #54be90;
     border-bottom: 0.4rem solid #fff;
+    text-decoration: none;
+}
+
+.full-name:hover {
+    opacity: 0.8;
 }
 
 h2 {
@@ -200,13 +236,11 @@ flex-wrap: nowrap;
 
 
 
-
-
-
-
 /* PORTFOLIO */
+
 #portfolio {
     background-color: #54be90;
+  
 }
 
 #portfolio h2 {
@@ -215,6 +249,288 @@ flex-wrap: nowrap;
 }
 
 
-#portfolio img {
-    width: 25%;
+.portfolio__project--wrap {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin: 3rem 0 5rem 0;
+   
 }
+
+
+.portfolio__project {
+    background-color: #fff;
+    width: 25%;
+    min-width: 250px;
+    max-width: 350px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: #232323;
+    text-align: center;
+
+}
+
+
+.portfolio__project img {
+        object-fit: cover;
+        max-height: 150px;
+        margin: 0.25rem;
+        opacity: 0.7;
+
+}
+
+.portfolio__project:hover img {
+        transition: 0.5s;
+        opacity: 1;
+
+}
+
+.project__text--wrap {
+    background-color: #ebebeb;
+    margin: 0 0.25rem 0.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.portfolio__project p {
+    margin: 0.5rem;
+    font-size: 0.875rem;
+
+}
+
+
+.portfolio__project:not(#final-project) p:nth-of-type(even) {
+    font-size: 1rem;
+    text-align: left;
+
+}
+
+#final-project {
+    background-color: #232323;
+}
+
+.btn-link {
+    margin-bottom: 0.75rem;
+}
+
+.btn-link a {
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
+    background-color: #54be90;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.25rem 4rem;
+    white-space: nowrap;
+
+
+}
+
+.btn-link a:hover {
+color: #232323;
+}
+
+
+/* ABOUT ME */
+
+#about {
+    background-color: #fff;
+    padding: 6rem 0 5rem 0;
+    
+}
+
+#about h2 {
+    margin: 0 0 1.5rem 0;
+}
+
+.about-me--wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#about img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 280px;
+    width: 280px;
+}
+
+.text--underline {
+    border-bottom: 0.25rem solid #54be90;
+}
+
+.about-me__text--wrap {
+    margin: 1rem 0 0 10%;
+    width: 50%;
+    
+}
+
+.about-me__text--wrap p {
+    margin: 1rem 0;
+}
+
+.about-me__text--wrap p:last-of-type {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+}
+
+/* FIND ME HERE */
+
+#find-me-here {
+    background-color: #232323;
+    color: #fff;
+    padding: 3rem 0 3rem 0;
+
+}
+
+
+#find-me-here h2{
+    font-size: 1.5rem;
+}
+
+.find-me-here__icons {
+    display: flex;
+    width: 80%;
+    margin: 2.5rem auto;
+    justify-content: space-around;
+}
+
+.find-me-here__icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 6rem;
+}
+
+.find-me-here__icons a:hover {
+    color: gray;
+}
+
+
+/* CONTACT ME */
+
+#contact {
+    background-color: #54be90;
+    padding: 3rem 0;
+}
+
+#contact h2 {
+    color: #fff;
+}
+
+.input-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.input-form input:not(.btn-submit) {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 48%;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    opacity: 1;
+}
+
+.input-form__textarea--wrap {
+    width: 100%;
+    color: #fff;
+
+}
+.input-form__textarea--wrap textarea {
+      border: none;
+      border-radius: 4px; 
+    resize: none;
+    width: 100%;
+    padding: 0.25rem;
+}
+
+.input-form__textarea--wrap label {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+ .btn-submit {
+     width: 100%;
+     margin: 1rem 0;
+     padding: 0.5rem;
+     border: none;
+     border-radius: 4px;
+    background-color: #232323;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    color: #54be90;
+}
+
+
+/* FOOTER - NICE TO MEET YOU */
+footer {
+    padding: 5rem 0;
+}
+.footer__line--wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer__line {
+    width: 25%;
+    height: 0.4rem;
+    background-color: #54be90;
+}
+
+.footer__line--wrap h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.footer__icons {
+    display: flex;
+    width: 80%;
+    margin: 2.5rem auto;
+    justify-content: center;
+    
+}
+
+.footer__icons a {
+    text-decoration: none;
+    color: #444;
+    font-size: 4rem;
+    padding: 0 2%;
+    opacity: 0.25
+}
+
+.footer__icons a:hover {
+    opacity: 0.5;
+}
+
+footer > p {
+    text-align: center;
+}
+
+/* THANK YOU FOR CHECKING OUT MY PROJECT */
